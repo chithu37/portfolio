@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chithra – ECE Student Portfolio</title>
+<meta name="description" content="Portfolio of Chithra, third-year Electronics and Communication Engineering student at VSB College of Engineering Technical Campus, Coimbatore.">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#F2F2F2;--card:#fff;--tx:#1E1E1E;--mut:#5a5a5a;--ac:#F85A0A;--act:#C2410C;--bd:#dcdcdc;color-scheme:light}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px);scroll-behavior:smooth}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141414;--card:#1E1E1E;--tx:#F2F2F2;--mut:#b5b5b5;--act:#FF8A4C;--bd:#333;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#141414;--card:#1E1E1E;--tx:#F2F2F2;--mut:#b5b5b5;--act:#FF8A4C;--bd:#333;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--act)}
+.w{max-width:1040px;margin:auto;padding:0 20px}
+section{padding:72px 0}
+h1,h2,h3{line-height:1.15;margin:0 0 .5em}
+h1{font-size:clamp(2.2rem,6vw,3.8rem)}h2{font-size:clamp(1.6rem,4vw,2.2rem)}
+h2::after{content:"";display:block;width:48px;height:4px;background:var(--ac);margin-top:10px}
+.ac{color:var(--ac)}
+header{position:fixed;top:0;left:0;right:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--bd);padding-top:env(safe-area-inset-top,0px)}
+nav{display:flex;align-items:center;justify-content:space-between;height:56px}
+.logo{font-weight:800;text-decoration:none;color:var(--tx)}
+.logo b{color:var(--ac)}
+.links{display:flex;gap:18px;align-items:center}
+.links a{text-decoration:none;color:var(--tx);font-size:.92rem}
+.links a:hover{color:var(--act)}
+button,.btn{font:inherit;cursor:pointer;border-radius:10px;border:1px solid var(--bd);background:var(--card);color:var(--tx);padding:8px 14px;text-decoration:none;display:inline-block}
+.btn.p{background:var(--ac);border-color:var(--ac);color:#1E1E1E;font-weight:700;box-shadow:0 4px 18px rgba(248,90,10,.35)}
+:focus-visible{outline:3px solid var(--ac);outline-offset:2px}
+#mb{display:none}
+@media(max-width:760px){#mb{display:inline-block}.links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--bg);flex-direction:column;align-items:flex-start;padding:14px 20px;border-bottom:1px solid var(--bd)}.links.o{display:flex}}
+.hero{padding-top:120px;position:relative;overflow:hidden}
+.hero .g{display:grid;gap:32px;grid-template-columns:1.3fr 1fr;align-items:center}
+@media(max-width:760px){.hero .g{grid-template-columns:1fr}}
+.tag{letter-spacing:.2em;text-transform:uppercase;font-size:.78rem;color:var(--mut)}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.ph{aspect-ratio:1;border:2px dashed var(--bd);border-radius:20px;display:grid;place-items:center;text-align:center;color:var(--mut);background:var(--card);padding:16px}
+#typ::after{content:"|";animation:bl 1s steps(1) infinite}
+@keyframes bl{50%{opacity:0}}
+.cards{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.c{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:20px;border-top:4px solid var(--ac)}
+.c h3{font-size:1.05rem}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;margin:16px 0}.kv dt{color:var(--mut)}.kv dd{margin:0;font-weight:600}
+.chip{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--bd);border-radius:99px;padding:3px 6px 3px 12px;margin:3px;font-size:.88rem}
+.chip button{border:0;background:none;padding:0 6px;color:var(--mut)}
+.chip.t{padding:3px 12px}
+.add{display:flex;gap:6px;margin-top:10px}
+input,select,textarea{font:inherit;color:var(--tx);background:var(--bg);border:1px solid var(--bd);border-radius:8px;padding:8px 10px;width:100%}
+.st{font-size:.75rem;font-weight:700;padding:2px 10px;border-radius:99px;background:var(--ac);color:#1E1E1E}
+.fl{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}.fl label{font-size:.85rem;color:var(--mut)}.fl select{width:auto}
+.dt{display:none;margin-top:12px;border-top:1px solid var(--bd);padding-top:12px;font-size:.92rem}.dt.o{display:block}
+.dt p{margin:.4em 0}.dt span{color:var(--mut)}
+.tl{border-left:3px solid var(--ac);padding-left:20px}
+.em{border:2px dashed var(--bd);border-radius:16px;padding:24px;color:var(--mut)}
+form{display:grid;gap:12px;max-width:560px}
+.er{color:#d33;font-size:.82rem;min-height:1em}
+#fs{padding:10px;border-radius:8px;border:1px solid var(--bd)}
+footer{padding:28px 0;border-top:1px solid var(--bd);color:var(--mut);font-size:.88rem}
+#top{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));display:none;z-index:15}
+.rv{opacity:0;transform:translateY(18px);transition:.6s}.rv.in{opacity:1;transform:none}
+.ckt path{stroke:var(--ac);stroke-width:2;fill:none;stroke-dasharray:6 8;animation:fl 2.5s linear infinite}
+.ckt rect{fill:var(--card);stroke:var(--ac);stroke-width:2}.ckt text{fill:var(--tx);font:700 11px monospace}
+@keyframes fl{to{stroke-dashoffset:-28}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto}.rv{opacity:1;transform:none}}
+</style></head><body>
+<header><div class="w"><nav aria-label="Main">
+<a class="logo" href="#home">Chithra<b>.</b></a>
+<div class="links" id="nl"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#certs">Certifications</a><a href="#resume">Resume</a><a href="#contact">Contact</a>
+<button id="th" aria-label="Toggle theme">◐ Theme</button></div>
+<button id="mb" aria-expanded="false" aria-controls="nl">☰ Menu</button>
+</nav></div></header>
+<main>
+<section class="hero" id="home"><div class="w g"><div>
+<p class="tag">Hello, I’m</p><h1><span class="ac">Chithra</span></h1>
+<h2 style="font-size:1.4rem">Electronics and Communication Engineering Student</h2>
+<p class="tag">Third-Year Engineering Student | Aspiring Engineer | Technology Enthusiast</p>
+<p style="font-weight:600">Exploring <span id="typ" class="ac"></span></p>
+<p style="max-width:60ch;color:var(--mut)">I am a third-year Electronics and Communication Engineering student at VSB College of Engineering Technical Campus, Coimbatore. I am passionate about exploring electronics, programming, embedded systems, robotics, artificial intelligence, and IoT-based solutions. I enjoy learning new technologies and developing innovative projects that solve real-world problems.</p>
+<div class="row"><a class="btn p" href="#projects">Explore My Projects</a><button id="hr">Download My Resume</button><a class="btn" href="#contact">Contact Me</a></div>
+</div><div>
+<div class="ph" role="img" aria-label="Profile photo placeholder"><div>📷<br>Profile photo placeholder<br><small>Replace with your photo</small></div></div>
+<svg class="ckt" viewBox="0 0 300 90" style="width:100%;margin-top:14px" aria-hidden="true"><path d="M0 45H70M130 45H170M230 45H300M100 15V30M100 60V75M200 15V30M200 60V75"/><rect x="70" y="28" width="60" height="34" rx="6"/><rect x="170" y="28" width="60" height="34" rx="6"/><text x="82" y="50">MCU</text><text x="188" y="50">IoT</text></svg>
+</div></div></section>
+
+<section id="about"><div class="w rv"><h2>About Me</h2>
+<p style="max-width:70ch;color:var(--mut)" id="bio">I am an enthusiastic engineering student interested in building practical technical solutions. My interests span electronics, communication systems, software development, emerging technologies, and hands-on engineering projects. (Edit this biography in the CONFIG at the top of the script.)</p>
+<dl class="kv"><dt>Name</dt><dd>Chithra</dd><dt>Degree</dt><dd>Bachelor of Engineering (B.E.)</dd><dt>Department</dt><dd>Electronics and Communication Engineering</dd><dt>Year</dt><dd>Third Year</dd><dt>Institution</dt><dd>VSB College of Engineering Technical Campus</dd><dt>Location</dt><dd>Coimbatore, Tamil Nadu, India</dd></dl>
+<div class="cards"><div class="c"><h3>🎓 Academic Journey</h3><p style="color:var(--mut)">Pursuing B.E. in ECE, currently in third year.</p></div><div class="c"><h3>🔬 Technical Interests</h3><p style="color:var(--mut)">Electronics, embedded systems, robotics, AI, IoT, and programming.</p></div><div class="c"><h3>🚀 Future Goals</h3><p style="color:var(--mut)">Seeking internships and entry-level opportunities. Add your own goals here.</p></div></div></div></section>
+
+<section id="skills"><div class="w rv"><h2>Technical Skills</h2>
+<p style="color:var(--mut)">Listed as areas of study, not verified proficiency. Add or remove skills below (changes save in this browser only). Levels are left unset until you confirm them.</p>
+<div class="cards" id="sk"></div></div></section>
+
+<section id="projects"><div class="w rv"><h2>My Engineering Projects</h2>
+<p style="color:var(--mut)">These are project concepts unless marked otherwise. No results, repositories or demos are claimed.</p>
+<div class="fl"><label>Status <select id="fs1"><option value="">All</option></select></label><label>Technology <select id="ft"><option value="">All</option></select></label></div>
+<div class="cards" id="pj"></div></div></section>
+
+<section id="education"><div class="w rv"><h2>Education</h2>
+<div class="tl"><h3>B.E. Electronics and Communication Engineering</h3><p>VSB College of Engineering Technical Campus, Coimbatore, Tamil Nadu, India<br><b>Current level:</b> Third Year</p>
+<dl class="kv"><dt>Admission year</dt><dd class="ph0">Not added yet</dd><dt>Expected graduation</dt><dd class="ph0">Not added yet</dd><dt>CGPA / percentage</dt><dd class="ph0">Not added yet</dd><dt>Relevant coursework</dt><dd class="ph0">Not added yet</dd><dt>Achievements</dt><dd class="ph0">Not added yet</dd><dt>Workshops / events</dt><dd class="ph0">Not added yet</dd></dl></div></div></section>
+
+<section id="certs"><div class="w rv"><h2>Certifications and Achievements</h2>
+<div class="em">Nothing listed yet. Add certificates, courses, workshops, hackathons, paper presentations, exhibitions, competitions or academic achievements in <code>CONFIG.certs</code>. Only verified items you provide will appear.</div>
+<div class="cards" id="ce" style="margin-top:16px"></div></div></section>
+
+<section id="resume"><div class="w rv"><h2>Resume</h2>
+<p style="color:var(--mut)">Open to internship and entry-level opportunities in electronics, embedded systems and software.</p>
+<div id="rs" class="em">No resume uploaded yet. Please upload your PDF below.</div>
+<div class="row"><label class="btn" for="rf">Upload / replace PDF</label><input id="rf" type="file" accept="application/pdf" style="display:none"></div>
+<p style="font-size:.85rem;color:var(--mut)">Uploading here previews it for this visit only. To make it permanent, set <code>CONFIG.resumeUrl</code> to your hosted PDF.</p></div></section>
+
+<section id="contact"><div class="w rv"><h2>Let’s Connect and Build Something Innovative!</h2>
+<p style="color:var(--mut);max-width:62ch">I am interested in learning, collaborating on engineering projects, exploring emerging technologies, and connecting with people who share similar technical interests.</p>
+<p id="lk"></p>
+<form id="cf" novalidate>
+<div><input name="n" placeholder="Name" aria-label="Name" autocomplete="name"><div class="er"></div></div>
+<div><input name="e" type="email" placeholder="Email" aria-label="Email" autocomplete="email"><div class="er"></div></div>
+<div><input name="s" placeholder="Subject" aria-label="Subject"><div class="er"></div></div>
+<div><textarea name="m" rows="5" placeholder="Message" aria-label="Message"></textarea><div class="er"></div></div>
+<button class="btn p" id="sb">Send Message</button><div id="fs" role="status" hidden></div></form></div></section>
+</main>
+<footer><div class="w">© <span id="yr"></span> Chithra · ECE, VSB College of Engineering Technical Campus, Coimbatore</div></footer>
+<button id="top" aria-label="Back to top">↑ Top</button>
+<script>
+// ===== EDIT HERE =====
+const CONFIG={
+ resumeUrl:"",            // e.g. "assets/resume.pdf"
+ formEndpoint:"",         // e.g. a Formspree/Supabase function URL
+ links:{Email:"",LinkedIn:"",GitHub:""}, // only filled links are shown
+ certs:[],                // {title,org,date,link}
+ interests:["electronics","embedded systems","robotics","AI","IoT","programming"]
+};
+const SKILLS={"Programming Languages":["C","Java","Python"],"Electronics and Communication":["Digital Electronics","Analog Electronics","Electronic Circuit Fundamentals","Communication Systems","Microcontrollers"],"Software and Development":["HTML","CSS","JavaScript","Git and GitHub"],"Emerging Technologies":["Artificial Intelligence","Internet of Things (IoT)","Robotics","Embedded Systems","Home Automation"]};
+const NA="Not added yet";
+const PROJECTS=[
+{t:"AI-Based Rockfall Prediction System for Open-Pit Mines Using UAVs",d:"A proposed intelligent monitoring system that uses drone imagery, terrain information, environmental data, and machine learning to assess rockfall risks in open-pit mines.",tags:["Python","Machine Learning","Computer Vision","UAV Imagery","Data Visualization"],s:"Idea"},
+{t:"Non-Satellite-Dependent Student Safety and Bus Arrival Intimation System",d:"A proposed student transportation safety system using GSM-based cell triangulation, RFID gateways, and communication technologies to support student identification and bus arrival notifications.",tags:["Embedded Systems","GSM","RFID","Microcontrollers","IoT"],s:"Idea"},
+{t:"AI-Enabled Home Automation System",d:"A proposed smart home system that combines electronic sensors, microcontrollers, mobile control, and AI-assisted features to monitor and control connected home devices.",tags:["ESP32","Sensors","IoT","Python","Mobile Applications"],s:"Idea"},
+{t:"Earthquake-Stabilized Dialysis System",d:"A proposed engineering concept exploring stabilization and monitoring technologies to improve the safety of dialysis equipment during seismic events.",tags:["Sensors","Embedded Systems","Control Systems","Vibration Monitoring"],s:"Idea"},
+{t:"Robotics and Automation",d:"A project area dedicated to robotic systems, motor control, sensor integration, and automation experiments.",tags:["Python","Microcontrollers","Sensors","Motor Drivers","Robotics"],s:"Idea"}
+].map(p=>Object.assign({problem:"",solution:"",hw:"",sw:"",contrib:"",gh:"",demo:"",docs:"",img:""},p));
+// ===== END EDIT =====
+const $=s=>document.querySelector(s),esc=s=>s.replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const R=document.documentElement;$("#yr").textContent=new Date().getFullYear();
+try{const t=localStorage.getItem("theme");if(t)R.dataset.theme=t}catch(e){}
+$("#th").onclick=()=>{const d=R.dataset.theme?R.dataset.theme==="dark":matchMedia("(prefers-color-scheme:dark)").matches;R.dataset.theme=d?"light":"dark";try{localStorage.setItem("theme",R.dataset.theme)}catch(e){}};
+$("#mb").onclick=e=>{const o=$("#nl").classList.toggle("o");e.target.setAttribute("aria-expanded",o)};
+document.querySelectorAll("#nl a").forEach(a=>a.onclick=()=>$("#nl").classList.remove("o"));
+// typing
+let i=0,j=0,del=false;const ty=$("#typ");
+(function tick(){const w=CONFIG.interests[i];ty.textContent=w.slice(0,j);if(!del&&j===w.length){del=true;return setTimeout(tick,1400)}if(del&&j===0){del=false;i=(i+1)%CONFIG.interests.length}j+=del?-1:1;setTimeout(tick,del?45:90)})();
+// skills
+let sk=JSON.parse(JSON.stringify(SKILLS));try{const s=localStorage.getItem("skills");if(s)sk=JSON.parse(s)}catch(e){}
+const save=()=>{try{localStorage.setItem("skills",JSON.stringify(sk))}catch(e){}};
+function rSk(){$("#sk").innerHTML=Object.keys(sk).map(c=>`<div class="c"><h3>${esc(c)}</h3>${sk[c].map((s,n)=>`<span class="chip">${esc(s)}<button data-c="${esc(c)}" data-n="${n}" aria-label="Remove ${esc(s)}">×</button></span>`).join("")}<div class="add"><input aria-label="Add skill to ${esc(c)}" placeholder="Add skill" data-a="${esc(c)}"><button data-ad="${esc(c)}">Add</button></div></div>`).join("");
+document.querySelectorAll("[data-n]").forEach(b=>b.onclick=()=>{sk[b.dataset.c].splice(+b.dataset.n,1);save();rSk()});
+document.querySelectorAll("[data-ad]").forEach(b=>b.onclick=()=>{const inp=b.previousElementSibling,v=inp.value.trim();if(v){sk[b.dataset.ad].push(v);save();rSk()}})}
+rSk();
+// projects
+const sts=["Idea","In Progress","Prototype","Completed"],tg=[...new Set(PROJECTS.flatMap(p=>p.tags))].sort();
+sts.forEach(s=>$("#fs1").add(new Option(s,s)));tg.forEach(s=>$("#ft").add(new Option(s,s)));
+const f=(l,v)=>`<p><span>${l}:</span> ${v?esc(v):NA}</p>`,lnk=(l,v)=>`<p><span>${l}:</span> ${v?`<a href="${esc(v)}" target="_blank" rel="noopener">Open</a>`:NA}</p>`;
+function rP(){const a=$("#fs1").value,b=$("#ft").value;$("#pj").innerHTML=PROJECTS.map((p,n)=>({p,n})).filter(({p})=>(!a||p.s===a)&&(!b||p.tags.includes(b))).map(({p,n})=>`<article class="c"><span class="st">${esc(p.s)}</span><h3 style="margin-top:10px">${esc(p.t)}</h3><p style="color:var(--mut)">${esc(p.d)}</p><div>${p.tags.map(t=>`<span class="chip t">${esc(t)}</span>`).join("")}</div><div class="row"><button data-d="${n}" aria-expanded="false">View details</button></div><div class="dt" id="d${n}">${f("Problem statement",p.problem)}${f("Proposed solution",p.solution)}${f("Hardware",p.hw)}${f("Software",p.sw)}${f("My contribution",p.contrib)}${lnk("GitHub",p.gh)}${lnk("Live demo",p.demo)}${lnk("Documentation",p.docs)}</div></article>`).join("")||'<div class="em">No projects match these filters.</div>';
+document.querySelectorAll("[data-d]").forEach(b=>b.onclick=()=>{const o=$("#d"+b.dataset.d).classList.toggle("o");b.setAttribute("aria-expanded",o);b.textContent=o?"Hide details":"View details"})}
+$("#fs1").onchange=$("#ft").onchange=rP;rP();
+// certs & links
+$("#ce").innerHTML=CONFIG.certs.map(c=>`<div class="c"><h3>${esc(c.title)}</h3><p>${esc(c.org||"")} ${esc(c.date||"")}</p>${c.link?`<a href="${esc(c.link)}" target="_blank" rel="noopener">Verify</a>`:""}</div>`).join("");
+if(CONFIG.certs.length)document.querySelector("#certs .em").remove();
+const L=Object.entries(CONFIG.links).filter(([,v])=>v);
+$("#lk").innerHTML=L.length?L.map(([k,v])=>`<a class="btn" href="${k==="Email"?"mailto:"+esc(v):esc(v)}" target="_blank" rel="noopener">${esc(k)}</a> `).join(""):'<span class="em" style="display:inline-block;padding:8px 14px">Email, LinkedIn and GitHub links not added yet (see CONFIG.links).</span>';
+// resume
+let ru=CONFIG.resumeUrl;
+function rR(){$("#rs").className=ru?"":"em";$("#rs").innerHTML=ru?`<a class="btn p" href="${esc(ru)}" target="_blank" rel="noopener">Open / Download Resume</a>`:"No resume uploaded yet. Please upload your PDF below."}
+rR();$("#rf").onchange=e=>{const f=e.target.files[0];if(f&&f.type==="application/pdf"){ru=URL.createObjectURL(f);rR()}};
+$("#hr").onclick=()=>ru?window.open(ru,"_blank","noopener"):location.hash="#resume";
+// form
+$("#cf").onsubmit=async e=>{e.preventDefault();const F=e.target,v=n=>F[n].value.trim(),er=[...F.querySelectorAll(".er")];er.forEach(x=>x.textContent="");let ok=true;
+const bad=(i,m)=>{er[i].textContent=m;ok=false};
+if(v("n").length<2)bad(0,"Please enter your name.");if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v("e")))bad(1,"Enter a valid email.");if(v("s").length<3)bad(2,"Please add a subject.");if(v("m").length<10)bad(3,"Message must be at least 10 characters.");
+const s=$("#fs");s.hidden=false;if(!ok){s.textContent="Please fix the highlighted fields.";return}
+if(!CONFIG.formEndpoint){s.textContent="This form isn’t connected to a backend yet, so your message was NOT sent. Set CONFIG.formEndpoint to enable it.";return}
+$("#sb").disabled=true;s.textContent="Sending…";
+try{const r=await fetch(CONFIG.formEndpoint,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({name:v("n"),email:v("e"),subject:v("s"),message:v("m")})});if(!r.ok)throw 0;s.textContent="Message sent. Thank you!";F.reset()}catch(x){s.textContent="Sending failed. Please try again later."}$("#sb").disabled=false};
+// top + reveal
+$("#top").onclick=()=>scrollTo({top:0});addEventListener("scroll",()=>$("#top").style.display=scrollY>500?"block":"none",{passive:true});
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}}),{threshold:.08});document.querySelectorAll(".rv").forEach(x=>io.observe(x));
+</script></body></html>
